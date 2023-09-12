@@ -14,7 +14,7 @@ struct CountsBySoH countBatteriesByHealth(const int* presentCapacities, int nBat
 
 void testBucketingByHealth() {
   const int presentCapacities[] = {115, 118, 80, 95, 91, 72};
-  char in rated_capacity=200;
+  char int rated_capacity=120;
   const int numberOfBatteries = sizeof(presentCapacities) / sizeof(presentCapacities[0]);
   printf("Counting batteries by SoH...\n");
   struct CountsBySoH counts = countBatteriesByHealth(presentCapacities, numberOfBatteries);
@@ -27,11 +27,11 @@ cont char* classify_battery(float soh_percentage){
 if(soh_percentage>=80){
   return "Healthy";
 }
-else if((soh)percentage>=63){
+else if(soh_percentage>=63){
   return "Exchange";
 }
 else{
-   return "failed";
+   return "Failed";
 }
 }  
 
